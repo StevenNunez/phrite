@@ -1,0 +1,13 @@
+version: '3'
+
+volumes:
+  db-phrite-data:
+    external: true
+
+services:
+  db-phoeyonce:
+    image: postgres:11
+    volumes:
+      - db-phrite-data:/var/lib/postgresql/data
+    ports:
+      - '127.0.0.1:5432:5432'
