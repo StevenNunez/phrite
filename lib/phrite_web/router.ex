@@ -18,6 +18,7 @@ defmodule PhriteWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    live "/authoring", AuthoringLive
   end
 
   # Other scopes may use custom stacks.
